@@ -1,0 +1,72 @@
+/* index.css */
+
+/* Body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the body takes up at least the viewport height */
+  display: flex;
+  justify-content: center; /* Center contents horizontally */
+  align-items: center; /* Center contents vertically */
+}
+
+/* Container styles */
+.container {
+  max-width: 90%; /* Adjust max-width for smaller screens */
+  width: 100%; /* Full width for smaller screens */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and button styles */
+input[type="number"],
+button {
+  padding: 10px; /* Adjust padding for smaller screens */
+  font-size: 14px; /* Adjust font size for smaller screens */
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block; /* Ensure elements stack vertically on smaller screens */
+  margin: 10px auto; /* Center horizontally */
+  width: calc(100% - 20px); /* Full width minus margins for smaller screens */
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Paragraphs styles */
+.paragraphs {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Media Query for larger screens */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 600px; /* Adjust max-width for larger screens */
+    margin-top: 50px; /* Add margin from the top */
+  }
+
+  input[type="number"],
+  button {
+    width: auto; /* Revert to default width for larger screens */
+  }
+
+  input[type="number"] {
+    position: sticky; /* Input sticks to top when scrolling */
+    top: 20px; /* Adjust as needed */
+    z-index: 1; /* Ensure input is above paragraphs */
+    background-color: #fff; /* Ensure input is visible */
+  }
+}
